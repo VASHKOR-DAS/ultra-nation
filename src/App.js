@@ -21,6 +21,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Country loaded : {countries.length}</h1>
+      <h3>Country Added: </h3>
 
         {
           countries.map(country =>
