@@ -2,12 +2,15 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import Country from './components/Country/Country';
+import Cart from './components/Cart/Cart';
 
 function App() {
   const [countries, setCountries] = useState([]);
 
   // Country Added : 0, er majhe show krr jnne ata kora
-  const [AddedCountry, setAddedCountry] = useState([]);
+  const [cart, setCart] = useState([]);
+
+
 
 
 
@@ -22,15 +25,16 @@ function App() {
     // console.log('added', country);
 
     // Country Added : 0, er majhe show krr jnne ata kora
-    const newAddedCountry = [...AddedCountry, country]
-    setAddedCountry(newAddedCountry);
+    const newCart = [...cart, country]
+    setCart(newCart);
   }
 
 
   return (
     <div className='App'>
       <h1>Country loaded : {countries.length}</h1>
-      <h3>Country Added : {AddedCountry.length}</h3>
+      <h3>Country Added : {cart.length}</h3>
+      <Cart cart = {cart.length}></Cart>
 
         {
           countries.map(country =>
