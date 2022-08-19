@@ -13,18 +13,26 @@ function App() {
     // .catch(error => console.log(error))
   }, [])
 
+  const handleAddCountry = (country) => {
+    console.log('added', country);
+  }
+
 
   return (
     <div className='App'>
       <h1>Country loaded : {countries.length}</h1>
-      <ul>
+
         {
-          countries.map(country => 
-            <li>
-              <Country country = {country}></Country>
-            </li>)
+          countries.map(country =>
+              <Country 
+                key={country.alpha3Code}
+                country = {country}
+                handleAddCountry = {handleAddCountry}
+              >
+              </Country>
+            )
         }
-      </ul>
+
     </div>
   );
 }
