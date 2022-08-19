@@ -21,7 +21,7 @@ function App() {
         {
           countries.map(country => 
             <li>
-              <Country name = {country.name}></Country>
+              <Country country = {country}></Country>
             </li>)
         }
       </ul>
