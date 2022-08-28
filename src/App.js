@@ -34,8 +34,7 @@ function App() {
     <div className='App'>
       <h1>Country loaded : {countries.length}</h1>
       <h3>Country Added : {cart.length}</h3>
-      <Cart cart = {cart.length}></Cart>
-
+      <Cart cart = {cart}></Cart>
         {
           countries.map(country =>
               <Country 
